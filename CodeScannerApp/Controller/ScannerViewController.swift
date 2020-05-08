@@ -53,7 +53,7 @@ class ScannerViewController: UIViewController {
         present(alertViewController, animated: true)
     }
     
-    /// Present an alert when the scan vas successfully, with the scanned code
+    /// Present an alert when the scan was successfully, with the scanned code
     func presentSuccessAlert() {
         let alertViewController = UIAlertController(title: "Code scanned", message: scannedCode, preferredStyle: .alert)
         
