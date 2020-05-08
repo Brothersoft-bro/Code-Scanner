@@ -9,7 +9,7 @@ A demo app that shows how to generate QR Code, how to scan QR Code or Barcode wi
 - Swift 5
 
 ## Installation
-- clone this repository and run the application
+- clone or download this repository and run the application
 
 ## Features
 - Generate QR Code from the entered text (works from simulator or from real device)
