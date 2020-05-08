@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vgf-Fm-r6u">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Code View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Code View Controller" customClass="MainViewController" customModule="Code_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="vv0-jd-LZM">
+                                <rect key="frame" x="40" y="128" width="334" height="694"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrB-wb-Miz" userLabel="Generate QR Code">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="327"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Generate QR Code">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="gEI-PO-guI" kind="show" id="TcW-If-Dgg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5l7-tQ-8px" userLabel="Scan Code Button">
+                                        <rect key="frame" x="0.0" y="367" width="334" height="327"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Scan QR / Barcode">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="cEl-jN-i3y" kind="show" identifier="QRCodeScannerSegue" id="LZN-dI-Nli"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vv0-jd-LZM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="BxZ-WL-9MJ"/>
+                            <constraint firstItem="vv0-jd-LZM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="CbE-XY-goh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vv0-jd-LZM" secondAttribute="bottom" constant="40" id="PIe-Mz-Q2u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vv0-jd-LZM" secondAttribute="trailing" constant="40" id="wir-7t-JCG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Generate or Scan" id="mfA-Ya-buc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="119.86607142857142"/>
+        </scene>
+        <!--Generate View Controller-->
+        <scene sceneID="vfl-yl-Co1">
+            <objects>
+                <viewController id="gEI-PO-guI" userLabel="Generate View Controller" customClass="GenerateViewController" customModule="Code_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ltl-if-JRb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your text here..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FIO-3J-01n" userLabel="Text Field">
+                                <rect key="frame" x="20" y="108" width="374" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="eAZ-1t-FLc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="gEI-PO-guI" eventType="editingChanged" id="gN1-hF-ZIL"/>
+                                    <outlet property="delegate" destination="gEI-PO-guI" id="2Ro-3c-Fur"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAk-G3-8Ry" userLabel="Generate Button">
+                                <rect key="frame" x="161.5" y="172" width="91" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="WC5-eL-1CC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="generateButtonTapped:" destination="gEI-PO-guI" eventType="touchUpInside" id="08Y-f7-Gw6"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Oc-X8-eBD" userLabel="QR Image View">
+                                <rect key="frame" x="20" y="236" width="374" height="606"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aAk-G3-8Ry" firstAttribute="centerX" secondItem="Ltl-if-JRb" secondAttribute="centerX" id="1ej-pC-ptH"/>
+                            <constraint firstItem="46z-LO-Ufm" firstAttribute="trailing" secondItem="0Oc-X8-eBD" secondAttribute="trailing" constant="20" id="5rn-Ij-0QU"/>
+                            <constraint firstItem="0Oc-X8-eBD" firstAttribute="leading" secondItem="46z-LO-Ufm" secondAttribute="leading" constant="20" id="7nP-gz-QL4"/>
+                            <constraint firstItem="46z-LO-Ufm" firstAttribute="trailing" secondItem="FIO-3J-01n" secondAttribute="trailing" constant="20" id="WHv-59-Lzt"/>
+                            <constraint firstItem="46z-LO-Ufm" firstAttribute="bottom" secondItem="0Oc-X8-eBD" secondAttribute="bottom" constant="20" id="cYs-YI-yPd"/>
+                            <constraint firstItem="aAk-G3-8Ry" firstAttribute="top" secondItem="FIO-3J-01n" secondAttribute="bottom" constant="20" id="lYi-Y8-wev"/>
+                            <constraint firstItem="FIO-3J-01n" firstAttribute="leading" secondItem="46z-LO-Ufm" secondAttribute="leading" constant="20" id="og2-a7-PmH"/>
+                            <constraint firstItem="0Oc-X8-eBD" firstAttribute="top" secondItem="aAk-G3-8Ry" secondAttribute="bottom" constant="20" id="qby-Hb-GL0"/>
+                            <constraint firstItem="FIO-3J-01n" firstAttribute="top" secondItem="46z-LO-Ufm" secondAttribute="top" constant="20" id="yUM-Vb-5tb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="46z-LO-Ufm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hBb-ah-bHB"/>
+                    <connections>
+                        <outlet property="generateButton" destination="aAk-G3-8Ry" id="BCf-VD-hAM"/>
+                        <outlet property="qrImageView" destination="0Oc-X8-eBD" id="SSb-BA-doo"/>
+                        <outlet property="qrTextField" destination="FIO-3J-01n" id="d8s-Ha-D9f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="64P-a6-Ixo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="846"/>
+        </scene>
+        <!--Scanner View Controller-->
+        <scene sceneID="xs3-m0-yY6">
+            <objects>
+                <viewController id="GIS-zV-owi" userLabel="Scanner View Controller" customClass="ScannerViewController" customModule="Code_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xN4-pp-91L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eTr-qt-xCv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scanning..." id="6ZK-Am-Nxk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="8By-Pj-uvn" userLabel="Done Button">
+                            <connections>
+                                <segue destination="A8S-YH-z21" kind="unwind" unwindAction="dismissScannerViewController:" id="V1M-qk-ZYn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7H-up-gwu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="A8S-YH-z21" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2878.2608695652175" y="119.86607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tsq-eZ-Fuq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vgf-Fm-r6u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rIx-pL-Twh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="g86-EC-Bet"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nlD-RT-LSH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="119.86607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zHB-lV-F1L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="cEl-jN-i3y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="13t-JT-VDX"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="imR-Tk-3Bh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GIS-zV-owi" kind="relationship" relationship="rootViewController" id="ODh-V1-4h7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jc7-Vz-fzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968.1159420289857" y="119.86607142857142"/>
+        </scene>
+    </scenes>
+</document>
