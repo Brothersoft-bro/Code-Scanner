@@ -1,6 +1,6 @@
 # Code Scanner
 
-A demo app what is show how to generate QR Code, and how to scan QR Code or Barcode with Swift, without using any third party libraries.
+A demo app that shows how to generate QR Code, how to scan QR Code or Barcode with Swift, without using any third party libraries.
 
 # Requirements
 
